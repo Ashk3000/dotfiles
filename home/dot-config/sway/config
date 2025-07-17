@@ -60,7 +60,7 @@ input type:pointer {
     bindsym $mod+$launcher exec rofi -show drun
 
     # Clipboard Manager
-    bindsym $mod+$clipboard exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+    bindsym $mod+$clipboard exec cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy
 
     # Screenshot
     bindsym $mod+$screenshot exec grim -g "$(slurp -d)" - | wl-copy

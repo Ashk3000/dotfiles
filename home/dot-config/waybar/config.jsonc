@@ -1,0 +1,121 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 46, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    
+    "modules-left": [
+        //"tray",
+
+        "network",
+        "cpu",
+        "memory"
+        
+    ],
+    "modules-center": [
+        //"sway/window",
+        "image#logo"
+    ],
+    "modules-right": [
+        //"mpd",
+        "battery",
+        "pulseaudio",
+        "clock"
+	// "sway/workspaces",
+        // "sway/mode",
+        // "custom/media"
+    ],
+
+    "image#logo": {
+        "path": "/home/ash/.config/waybar/1981Logo.svg",
+        "size": 48
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}"
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "",
+        //     "4": "",
+        //     "5": "",
+        //     "urgent": "",
+        //     "default": ""
+        // }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "mpd": {
+        "format": "{artist} - <span style=\"italic\">{album}</span> - \"{title}\" ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "",
+        "unknown-tag": "N/A",
+        "interval": 5,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        }
+    },
+    "battery":{
+        "interval": 60,
+	"states": {
+		"warning": 30,
+		"critical": 15
+	},
+	"format": "{capacity}% {icon}",
+	"format-icons": ["", "", "", "", ""],
+	"max-length": 25
+    },
+    "tray": {
+        "icon-size": 20, // MAGIC
+        "spacing": 16 // MAGIC: double x padding in stle.css
+    },
+    "clock": {
+        "timezone": "America/New_York",
+        "tooltip-format": "<tt>{calendar}</tt>",
+    },
+    "cpu": {
+        "format": "{usage}% ",
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "network": {
+        // "interface": "eno1", // (Optional) To force the use of this interface
+        "family": "ipv4",
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+    },
+    "pulseaudio": {
+        "scroll-step": 3.125, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-muted": "0% {icon}",
+        "format-icons": {
+            "default": [
+                ""
+            ]
+        }
+    }
+}

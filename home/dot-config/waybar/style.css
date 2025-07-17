@@ -1,0 +1,134 @@
+
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free';
+    font-weight: 800;
+    font-size: 16pt; /* MAGIC meant to match font size in sway */
+}
+
+window#waybar {
+    background-color: rgba(15, 15, 15, 1);
+    color: #E6E7D7;
+    transition-property: background-color;
+    transition-duration: .4s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /*box-shadow: inset 0 -3px transparent; */
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button {
+    padding: 8px 8px;
+    background-color: transparent;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+
+    background: inherit;
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 8px 16px;
+    margin: 0 4px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* :root {
+    --c1: #E56F39;
+    --c2: #E65238;
+    --c3: #E32F36;
+    --c4: #3153A9;
+    --c5: #3D3274;
+    --c6: #271e39;
+
+    --b1: #0F0F0F;
+
+    --f1: #E6E7D7;
+} */
+
+
+#network {
+    background-color: #E56F39;
+    margin: 0 4px 0 0;
+}
+
+#cpu {
+    background-color: #E65238;
+}
+
+#memory {
+    background-color: #E32F36;
+}
+
+#mpd,
+#battery {
+    background-color: #3153A9;
+}
+
+#pulseaudio {
+    background-color: #3D3274;
+}
+
+#clock {
+    background-color: #271e39;
+    margin: 0 0 0 4px;
+}
+
+
+
+
+
+
+#tray {
+    background-color: #2980b9;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}

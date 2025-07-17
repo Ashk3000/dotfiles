@@ -1,0 +1,178 @@
+configuration {
+  modes: [ drun ];
+}
+
+
+
+* {
+    /* Theme settings */
+    highlight: bold;
+    scrollbar: true;
+
+
+    idkhow-cd1:rgba(229, 111, 57, 0.75);
+    idkhow-cd2:rgba(230, 82, 56, 0.75);
+    idkhow-cd3:rgba(227, 47, 54, 0.75);
+    idkhow-cd4:rgba(49, 83, 169, 0.75);
+    idkhow-cd5:rgba(61, 50, 116, 0.75);
+    idkhow-cd6:rgba(39, 30, 57, 0.75);
+
+    idkhow-b1: #0F0F0F;
+
+    idkhow-bd1: rgba(15, 15, 15, 0.75);
+
+    idkhow-f1: #E6E7D7;
+
+    /* Theme colors */ 
+    background:                  @idkhow-b1;
+    background-color:          #00000000;
+    foreground:                  @idkhow-f1;
+    border-color:                @idkhow-f1;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           #00000000;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @normal-background;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @normal-foreground;
+    selected-normal-foreground:  @background;
+
+    active-background:           @idkhow-cd4;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @idkhow-cd5;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @idkhow-cd3;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @idkhow-cd1;
+    selected-urgent-foreground:  @urgent-foreground;
+
+    font:                       "Noto Sans Mono 16";
+}
+
+entry {
+    placeholder: "";
+}
+
+window {
+    background-color: @background;
+    border:           4px;
+    padding:          0;
+    width: 1024px;
+    height: 744px;
+}
+
+mainbox {
+    background-color: @background;
+    border:  0;
+    padding: 0;
+    spacing:      0;
+    children: [inputbar, listview];
+    background-image: url("/home/ash/.config/rofi/bg.svg", width);
+}
+
+textbox {
+    highlight:  @highlight;
+    text-color: @foreground;
+}
+
+listview {
+    border:       0px solid 0 0;
+    padding:       0;
+    spacing:      0;
+    scrollbar:    @scrollbar;
+    fixed-height: true;
+    background-color: @idkhow-bd1;
+}
+
+element {
+    border: 0 0;
+    padding: 8px 16px;
+    border: 0 0 0 0;
+    
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+scrollbar {
+    handle-color: @scrollbar-handle;
+    handle-width: 16px;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding: 8px 16px 8px 16px;
+    children:   [ entry ];
+    background-color: @idkhow-bd1;
+}
+
+case-indicator,
+entry,
+prompt,
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding: 0;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ": ";
+    text-color: @normal-foreground;
+    margin:     0;
+    padding: 0;
+}
+

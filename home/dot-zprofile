@@ -1,0 +1,4 @@
+export $(envsubst < .env)
+
+# Created by `pipx` on 2025-03-01 12:45:13 TODO: wow rude. remove this or add pipx to pkgs
+export PATH="$PATH:/home/ash/.local/bin"

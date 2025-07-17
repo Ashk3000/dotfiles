@@ -1,0 +1,74 @@
+# Ash's packages
+# by Ashk3000
+
+# for pacman with multilib
+
+
+# system & deps
+base
+base-devel
+efibootmgr
+gst-plugin-pipewire
+libpulse
+linux
+linux-firmware
+networkmanager
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+wireplumber
+zram-generator
+speech-dispatcher
+
+# terminal apps & util
+fastfetch
+nano
+git
+stow
+7zip
+qemu-full
+jdk-openjdk
+jq
+wget
+
+# graphic apps
+kitty
+qutebrowser
+# qutebrowser dep:
+qt6-wayland
+gimp
+prismlauncher
+inkscape
+mpv
+steam
+easyeffects
+#--------easyeffects deppendancies: (ugh someone fix this its totally weird)
+#lv2-host
+#carla
+#lsp-plugins
+#--------
+
+# desktop 
+sway
+rofi-wayland
+waybar
+swaybg
+mako
+cliphist
+kanshi
+wl-clipboard
+wf-recorder
+grim
+slurp
+xorg-xwayland
+
+# other
+gnu-free-fonts
+otf-font-awesome
+noto-fonts
+noto-fonts-cjk
+noto-fonts-extra
+noto-fonts-emoji
+ntfs-3g
+espeakup

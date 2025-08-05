@@ -20,7 +20,7 @@
         "image#logo"
     ],
     "modules-right": [
-        //"mpd",
+        "mpd",
         "battery",
         "pulseaudio",
         "clock"
@@ -53,7 +53,8 @@
         "format": "<span style=\"italic\">{}</span>"
     },
     "mpd": {
-        "format": "{artist} - <span style=\"italic\">{album}</span> - \"{title}\" ",
+        //"format": "{artist} - <span style=\"italic\">{album}</span> - \"{title}\" ",
+        "format": "{title} ",
         "format-disconnected": "Disconnected ",
         "format-stopped": "",
         "unknown-tag": "N/A",

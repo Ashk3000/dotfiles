@@ -24,8 +24,8 @@ set $close d
 
 set $term kitty
 
-#output * scale $scale
-exec kanshi
+output * scale $scale
+#exec kanshi
 exec swaybg -c '#0F0F0F'
 
 exec wl-paste --watch cliphist store

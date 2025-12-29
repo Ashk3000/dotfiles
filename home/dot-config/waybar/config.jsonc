@@ -30,7 +30,7 @@
     ],
 
     "image#logo": {
-        "path": "/home/ash/.config/waybar/1981Logo.svg",
+        "exec": "~/.config/waybar/logo_path.sh",
         "size": 48
     },
 

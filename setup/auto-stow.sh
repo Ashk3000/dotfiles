@@ -1,4 +1,2 @@
-mkdir ~/.config
-
-stow --dotfiles -S home -d $(dirname $0)/.. -t ~
+stow --dotfiles --no-folding -S home -d $(dirname $0)/.. -t ~
 

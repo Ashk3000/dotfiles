@@ -110,7 +110,7 @@
         "format-disconnected": "Disconnected ⚠",
     },
     "pulseaudio": {
-        "scroll-step": 3.125, // %, can be a float
+        "scroll-step": 5, // %, can be a float
         "format": "{volume}% {icon}",
         "format-muted": "0% {icon}",
         "format-icons": {

@@ -67,8 +67,8 @@ input type:pointer {
     bindsym $mod+$screenshot exec grim -g "$(slurp -d)" - | wl-copy
 
     # Volume
-    bindsym $mod+$vol_up exec wpctl set-volume @DEFAULT_SINK@ 3.125%+
-    bindsym $mod+$vol_down exec wpctl set-volume @DEFAULT_SINK@ 3.125%-
+    bindsym $mod+$vol_up exec wpctl set-volume @DEFAULT_SINK@ 5%+
+    bindsym $mod+$vol_down exec wpctl set-volume @DEFAULT_SINK@ 5%-
 
     bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+

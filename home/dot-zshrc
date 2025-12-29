@@ -1,4 +1,1 @@
-alias please="sudo"
-
-# Created by `pipx` on 2025-03-01 12:45:13
 export PATH="$PATH:/home/ash/.local/bin"

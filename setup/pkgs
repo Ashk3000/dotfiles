@@ -7,9 +7,9 @@
 # system & deps
 base
 base-devel
-efibootmgr
+# efibootmgr
 gst-plugin-pipewire
-libpulse
+# libpulse
 linux
 linux-firmware
 networkmanager
@@ -18,8 +18,8 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 wireplumber
-zram-generator
-speech-dispatcher
+# zram-generator
+# speech-dispatcher
 
 # terminal apps & util
 fastfetch
@@ -27,23 +27,23 @@ nano
 git
 stow
 7zip
-qemu-full
+# qemu-full
 jdk-openjdk
-jq
+# jq
 wget
 devtools
+htop
 
 # graphic apps
-kitty
-qutebrowser
+# qutebrowser
 # qutebrowser dep:
-qt6-wayland
+# qt6-wayland
 gimp
 prismlauncher
 inkscape
 mpv
 steam
-easyeffects
+#easyeffects
 #--------easyeffects deppendancies: (ugh someone fix this its totally weird)
 #lv2-host
 #carla
@@ -63,6 +63,7 @@ wf-recorder
 grim
 slurp
 xorg-xwayland
+kitty
 
 # other
 gnu-free-fonts
@@ -71,5 +72,5 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
 noto-fonts-emoji
-ntfs-3g
-espeakup
+#ntfs-3g
+#espeakup

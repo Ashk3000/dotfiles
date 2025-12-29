@@ -38,6 +38,7 @@ seat seat0 hide_cursor 8000
 
 input "type:touchpad" {
     dwt disabled
+    natural_scroll enabled
 }
 
 input type:pointer {

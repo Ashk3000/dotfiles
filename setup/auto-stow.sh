@@ -1,2 +1,3 @@
-stow --dotfiles --no-folding -S home -d $(dirname $0)/.. -t ~
+stow --dotfiles --no-folding -d $(dirname $0)/.. -S home -t ~
 
+stow --dotfiles --no-folding -d $(dirname $0)/.. -S NetworkManager -t /etc/NetworkManager

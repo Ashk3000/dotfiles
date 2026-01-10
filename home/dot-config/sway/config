@@ -34,7 +34,7 @@ exec mako
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # Hide mouse cursor after a period of inactivity.
-seat seat0 hide_cursor 8000
+seat seat0 hide_cursor 16384
 
 input "type:touchpad" {
     dwt disabled
@@ -44,6 +44,10 @@ input "type:touchpad" {
 input type:pointer {
     accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
     pointer_accel 1 # set mouse sensitivity (between -1 and 1)
+}
+
+input type:keyboard {
+    xkb_options ctrl:nocaps
 }
 
 ### Key bindings
@@ -75,6 +79,9 @@ input type:pointer {
     bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
     bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_SOURCE@ toggle
 
+    bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+    bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -96,10 +103,29 @@ input type:pointer {
     bindsym $mod+$right focus right
 
     # Move the focused window
-    bindsym $mod+Left move left
-    bindsym $mod+Down move down
-    bindsym $mod+Up move up
-    bindsym $mod+Right move right
+    bindsym $mod+Ctrl+$left move left
+    bindsym $mod+Ctrl+$down move down
+    bindsym $mod+Ctrl+$up move up
+    bindsym $mod+Ctrl+$right move right
+
+    # Move your focus around
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Move the focused window
+    bindsym $mod+Ctrl+Left move left
+    bindsym $mod+Ctrl+Down move down
+    bindsym $mod+Ctrl+Up move up
+    bindsym $mod+Ctrl+Right move right
+
+    # Move the focused window
+    #bindsym $mod+Left move left
+    #bindsym $mod+Down move down
+    #bindsym $mod+Up move up
+    #bindsym $mod+Right move right
+
 #
 # Workspaces:
 #

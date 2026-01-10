@@ -13,11 +13,14 @@ gst-plugin-pipewire
 linux
 linux-firmware
 networkmanager
+openresolv
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
 wireplumber
+bluez
+bluez-utils
 # zram-generator
 # speech-dispatcher
 
@@ -60,6 +63,7 @@ cliphist
 kanshi
 wl-clipboard
 wf-recorder
+libnotify
 grim
 slurp
 xorg-xwayland
